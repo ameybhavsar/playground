@@ -2,5 +2,6 @@
 /.settings/
 /.project
 /bin/
-/.idea/
-/.gradle/
+.gradle
+build/
+
