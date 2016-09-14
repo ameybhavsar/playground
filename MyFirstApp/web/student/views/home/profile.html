@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+
+<div ng-app="myApp">
+   <form novalidate class="simple-form">
+   
+   	  <img ng-src={{student.picture.data.url}} alt="Description"/>
+      
+      Name: <input type="text" ng-model="student.name" </input><br />
+     
+      E-mail: <input type="email" ng-model= "student.email" /><br />
+     
+      Gender: <input type="radio" ng-model="student.gender" value="male" />male
+     
+      <input type="radio" ng-model="student.gender" value="female" />female<br />
+     
+      <input type="button" ng-click="reset()" value="Reset" />
+     
+      <input type="submit" ng-click="save(student)" value="Save" />  
+   </form>
+</div>
+</body>
+</html>
