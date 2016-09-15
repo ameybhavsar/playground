@@ -16,8 +16,9 @@ import java.util.List;
 
 @Path("/student")
 @Produces(MediaType.APPLICATION_JSON)
-@Consumes(MediaType.APPLICATION_JSON)
 public class StudentResource {
+
+
 
     @GET
     @Timed
@@ -30,15 +31,22 @@ public class StudentResource {
     @Timed
     @Path("/list")
     public List<Student> getStudentList(){
-        StudentUtil.generateStudentList();
-        return StudentList.getStudents();
+       return StudentUtil.currentStudentList;
     }
 
     @POST
     @Timed
     @Path("/add")
     public void addStudent(Student student){
+        StudentUtil.currentStudentList.add(student);
+    }
+
+    /*@POST
+    @Timed
+    @Path("/add")
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+    public void addStudent(@FormParam("name") name){
         StudentUtil.generateStudentList();
         StudentList.addStudent(student);
-    }
+    }*/
 }

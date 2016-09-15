@@ -31,12 +31,12 @@ public class MyFirstAppResource {
         this.counter = new AtomicLong();
     }
 
-    @GET
+/*    @GET
     @Timed
     public Saying sayHello(@QueryParam("name") Optional<String> name) {
         final String value = String.format(template, name.orElse(defaultName));
         return new Saying(counter.incrementAndGet(), value);
-    }
+    }*/
 
 
 

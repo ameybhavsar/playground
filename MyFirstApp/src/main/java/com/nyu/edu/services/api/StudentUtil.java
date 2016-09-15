@@ -8,15 +8,16 @@ import java.util.List;
  */
 public class StudentUtil {
 
-    static public List<Student> generateStudentList(){
+    public static List<Student> currentStudentList = new ArrayList<>();
+
+    static public List<Student> initializeStudentList() {
         List<Student> studentList = new ArrayList<>();
         Student student1 = new Student("Amey", "Bhavsar", "M");
         Student student2 = new Student("Bhavisha", "Dawada", "F");
         Student student3 = new Student("Mrunal", "Bhavsar", "F");
-        studentList.add(student1);
-        studentList.add(student2);
-        studentList.add(student3);
-        StudentList students = new StudentList();
-        return  students.addStudents(studentList);
+        currentStudentList.add(student1);
+        currentStudentList.add(student2);
+        currentStudentList.add(student3);
+        return currentStudentList;
     }
 }

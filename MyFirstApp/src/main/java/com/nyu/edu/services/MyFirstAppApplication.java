@@ -1,5 +1,6 @@
 package com.nyu.edu.services;
 
+import com.nyu.edu.services.api.StudentUtil;
 import com.nyu.edu.services.health.TemplateHealthCheck;
 import com.nyu.edu.services.resources.MyFirstAppResource;
 import com.nyu.edu.services.resources.StudentResource;
@@ -23,6 +24,7 @@ import static org.eclipse.jetty.servlets.CrossOriginFilter.*;
 public class MyFirstAppApplication extends Application<MyFirstAppConfiguration> {
 
     public static void main(String[] args) throws Exception {
+        StudentUtil.initializeStudentList();
         new MyFirstAppApplication().run(args);
     }
 

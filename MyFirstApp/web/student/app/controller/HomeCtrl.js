@@ -13,25 +13,25 @@ myApp.controller('HomeCtrl', function($location,$scope,SharedDataService){
 			$scope.testAPI();
 		} else if (response.status === 'not_authorized') {
 			document.getElementById('status').innerHTML = 'Please log ' +
-			'into this app.';
+				'into this app.';
 		} else {
 			document.getElementById('status').innerHTML = 'Please log ' +
-			'into Facebook.';
+				'into Facebook.';
 		}
 	}
 
 	$scope.testAPI = function(){
 		FB.api(
-				'/me',
-				'GET',
-				{"fields":"name,birthday,education,email,picture,gender"},
-				function(response) {
-					console.log(response);
-					SharedDataService.response = response
-					$location.path("/profile");
-					$scope.$apply();
-					
-				}
+			'/me',
+			'GET',
+			{"fields":"name,birthday,education,email,picture,gender"},
+			function(response) {
+				console.log(response);
+				SharedDataService.response = response
+				$location.path("/profile");
+				$scope.$apply();
+
+			}
 		);
 	}
 });

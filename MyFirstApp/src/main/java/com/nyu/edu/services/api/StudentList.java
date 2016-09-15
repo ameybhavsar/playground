@@ -8,22 +8,22 @@ import java.util.List;
  */
 public class StudentList {
 
-    private static List<Student> students;
+    private List<Student> students;
 
     public  StudentList() {
-        students = new ArrayList<>();
+        students = StudentUtil.initializeStudentList();
     }
 
-    public static List<Student> getStudents() {
+    public List<Student> getStudents() {
         return students;
     }
 
-    public static List<Student> addStudent(Student student){
+    public  List<Student> addStudent(Student student){
         students.add(student);
-        return  students;
+        return students;
     }
 
-    public static List<Student> addStudents(List<Student> studentList)
+    public  List<Student> addStudents(List<Student> studentList)
     {
         students.addAll(studentList);
         return students;
