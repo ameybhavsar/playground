@@ -2,10 +2,12 @@ package com.nyu.edu.services.resources;
 
 import com.codahale.metrics.annotation.Timed;
 import com.nyu.edu.services.api.Student;
-import com.nyu.edu.services.api.StudentList;
 import com.nyu.edu.services.api.StudentUtil;
 
-import javax.ws.rs.*;
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import java.util.List;
 
@@ -31,7 +33,7 @@ public class StudentResource {
     @Timed
     @Path("/list")
     public List<Student> getStudentList(){
-       return StudentUtil.currentStudentList;
+        return StudentUtil.currentStudentList;
     }
 
     @POST
