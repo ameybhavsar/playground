@@ -12,6 +12,10 @@ myApp.config(['$routeProvider', function($routeProvider) {
 			templateUrl : "home/list.html",
 			controller : "ListCtrl"
 		})
+		.when("/map", {
+			templateUrl : "home/map.html",
+			controller : "MapCtrl"
+		})
 		.otherwise("/",{
 			templateUrl : "home/login.html",
 			controller : "HomeCtrl"
