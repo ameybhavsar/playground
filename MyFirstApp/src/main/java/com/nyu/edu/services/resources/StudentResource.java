@@ -20,12 +20,10 @@ import java.util.List;
 @Produces(MediaType.APPLICATION_JSON)
 public class StudentResource {
 
-
-
     @GET
     @Timed
     public Student getStudentByName(){
-        Student student = new Student("Amey","Bhavsar","F");
+        Student student = new Student(1, "Amey Bhavsar","Male","abc@gmail.com", null);
         return student;
     }
 

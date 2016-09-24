@@ -12,9 +12,9 @@ public class StudentUtil {
 
     static public List<Student> initializeStudentList() {
         List<Student> studentList = new ArrayList<>();
-        Student student1 = new Student("Amey", "Bhavsar", "M");
-        Student student2 = new Student("Bhavisha", "Dawada", "F");
-        Student student3 = new Student("Mrunal", "Bhavsar", "F");
+        Student student1 = new Student(1, "Amey", "Male", "abc@gmail.com", null);
+        Student student2 = new Student(2, "Bhavisha", "Female", "abc@gmail.com", null);
+        Student student3 = new Student(3, "Mrunal", "Female", "abc@gmail.com", null);
         currentStudentList.add(student1);
         currentStudentList.add(student2);
         currentStudentList.add(student3);
