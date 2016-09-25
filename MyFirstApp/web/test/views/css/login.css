@@ -1,0 +1,11 @@
+.form-control{
+    width: 25%;
+}
+
+.form-control.name{
+    width:100%;
+}
+
+div.sign-up{
+    text-align: left;
+}

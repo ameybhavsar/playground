@@ -1241,7 +1241,7 @@ QUnit.test( ".trigger() doesn't bubble load event (#10717)", function( assert ) 
 	} );
 
 	// It's not an image, but as long as it fires load...
-	jQuery( "<img src='index.html' />" )
+	jQuery( "<img src='indexold.html' />" )
 		.appendTo( "body" )
 		.on( "load", function() {
 			assert.ok( true, "load fired on img" );
